@@ -5,12 +5,12 @@
 
       <nav>
         <img src="../assets/logo.png" alt="logo" class="logo">
-        <ul v-show="menuOpen">
-          <li> <a href="#"> Home</a> </li>
-          <li> <a href="#"> About</a> </li>
-          <li> <a href="#"> Proficiencies</a> </li>
-          <li> <a href="#"> Portfolio </a> </li>
-          <li> <a href="#"> Contact </a> </li>
+        <ul>
+          <li> <a href="#header"> Home</a> </li>
+          <li> <a href="#about"> About</a> </li>
+          <li> <a href="#services"> Proficiencies</a> </li>
+          <li> <a href="#portfolio"> Portfolio </a> </li>
+          <li> <a href="#contact"> Contact </a> </li>
         </ul>
 
       </nav>
@@ -611,4 +611,7 @@ nav .fas {
   }
 }
 
+html {
+   scroll-behavior: smooth;
+}
 </style>
