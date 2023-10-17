@@ -8,7 +8,7 @@
         <ul>
           <li> <a href="#"> Home</a> </li>
           <li> <a href="#"> About</a> </li>
-          <li> <a href="#"> Services</a> </li>
+          <li> <a href="#"> Proficiencies</a> </li>
           <li> <a href="#"> Portfolio </a> </li>
           <li> <a href="#"> Contact </a> </li>
         </ul>
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <!-- About Section -->
+  <!------------------ About Section ----------------------------->
   <div id="about">
     <div class="container">
       <div class="row">
@@ -48,7 +48,7 @@
 
           <div class="tab-contents" v-show="activeTab === 'skills'">
             <ul>
-              <li> <span> Programming Languages </span> <br> Python - C - Ruby </li>
+              <li> <span> Programming Languages </span> <br> Python - JavaScript - Ruby - C </li>
               <li> <span> Back-end Frameworks </span> <br> Django - Rails - Laravel </li>
               <li> <span> Front-end Frameworks </span> <br> Vue.js - React.js - Stimulus.js </li>
             </ul>
@@ -78,9 +78,53 @@
     </div>
   </div>
 
+  <!----------------------------------------- Services Section ----------------------------------------------->
+
+
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title"> My Proficiencies </h1>
+      <div class="services-list">
+        <div>
+          <font-awesome-icon icon="code" class="large-icon"/>
+          <h2>Web Development</h2>
+          <p>
+            Specializing in crafting interactive and dynamic web applications,
+            my expertise in web development covers everything from front-end to back-end development.
+            With a strong grasp of languages including Python, Ruby, JavaScript, HTML, and CSS.
+          </p>
+        </div>
+
+        <div>
+          <font-awesome-icon icon="crop" class="large-icon"/>
+          <h2>Data Analysis & AI </h2>
+          <p>Leveraging a solid foundation in Electrical and Electronics Engineering combined with a diploma in Artificial Intelligence and Data Science,
+            I offer data-driven solutions to business challenges.
+            I ensure businesses stay ahead of the curve.
+            I focus on fast query performance.
+          </p>
+
+        </div>
+
+        <div>
+          <font-awesome-icon :icon="['fab', 'app-store']" class="large-icon"/>
+          <h2> Database Management </h2>
+          <p>In today's data-driven era, efficient data storage and retrieval are paramount for business operations.
+            Leveraging my comprehensive, hands-on experience in effectively managing, maintaining, and meticulously optimizing extensive, large-scale databases.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!----------- Portfolio ---------------->
+
+
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -243,4 +287,43 @@ export default {
   font-size: 14px;
   color: #b54769;
 }
+
+ /* --------------Services Section ----------------*/
+
+ #services {
+  padding: 30px 0;
+ }
+
+ .services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+ }
+
+ .services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 13px;
+  transition: background 0.5s, transform 0.5s;
+ }
+
+ .services-list div h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+ }
+
+ .services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
+ }
+
+ .large-icon {
+  font-size: 30px;
+  margin-bottom: 20px;
+ }
+
 </style>
