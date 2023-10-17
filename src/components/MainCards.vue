@@ -5,13 +5,14 @@
 
       <nav>
         <img src="../assets/logo.png" alt="logo" class="logo">
-        <ul>
+        <ul v-show="menuOpen">
           <li> <a href="#"> Home</a> </li>
           <li> <a href="#"> About</a> </li>
           <li> <a href="#"> Proficiencies</a> </li>
           <li> <a href="#"> Portfolio </a> </li>
           <li> <a href="#"> Contact </a> </li>
         </ul>
+
       </nav>
 
       <div class="header-text">
@@ -59,7 +60,7 @@
               <li> <span> 08/2023 - Present </span> <br> Web Developer Intern </li>
               <li> <span> 01/2023 - 06/2023 </span> <br> Customer Support Representative </li>
               <li> <span> 07/2021 - 12/2022 </span> <br> Technical Support Agent  </li>
-              <li> <span> 12/2025 - 07/2021 </span> <br> Data Analysis Controller </li>
+              <li> <span> 12/2015 - 07/2021 </span> <br> Data Analysis Controller </li>
 
             </ul>
           </div>
@@ -185,7 +186,17 @@
 export default {
   data() {
     return {
-      activeTab: 'skills'
+      activeTab: 'skills',
+      menuOpen: true
+    }
+  },
+
+  methods: {
+    openMenu() {
+      this.menuOpen = true;
+    },
+    closeMenu() {
+      this.menuOpen = false;
     }
   }
 }
@@ -504,6 +515,100 @@ export default {
 .btn.btn2 {
   display: inline-block;
   background: #ff004f;
+}
+
+nav .fas {
+  display: none;
+}
+
+/* ---------------CSS FOR SMALL SCREEN-------- */
+@media only screen and (max-width: 600px) {
+  * {
+    margin: -1px;
+  }
+  .header-text {
+    margin-top: 20%;
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .work img {
+    width: 76%;
+    height: 220px;
+  }
+
+  .sub-title {
+    font-size: 30px;
+  }
+
+  .services-list div {
+    padding: 8px;
+    font-size: 13px;
+    width: 235px
+
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-col-1 img {
+    width: 235px;
+  }
+
+  #about {
+    padding: 0px 0;
+  }
+
+  .about-col-2 {
+    width: 250px;
+  }
+
+  .tab-titles {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .tab-links {
+    margin-bottom: 10px;
+  }
+
+  .tab-links.active-link::after {
+    width: 20%;
+  }
 }
 
 </style>
