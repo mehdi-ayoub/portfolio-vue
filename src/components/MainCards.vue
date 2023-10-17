@@ -126,7 +126,7 @@
       <div class="work-list">
         <div class="work">
           <a href="https://github.com/mehdi-ayoub/EcoWheels"> <img src="../assets/EcoWheels.png" > </a>
-          <div class="layout">
+          <div class="layer">
             <h3> CO2 Emission Calculator App </h3>
             <p> Developed using Rails, this application automatically detects and
               captures user location through geolocation services.
@@ -138,7 +138,7 @@
         </div>
         <div class="work">
           <a href="https://github.com/mehdi-ayoub/React-Project-1">  <img src="../assets/React.png" > </a>
-          <div class="layout">
+          <div class="layer">
             <h3> Delivery App </h3>
             <p> Built with Rails on the back-end and React on the front-end,
               this delivery application supports comprehensive CRUD actions.
@@ -149,7 +149,7 @@
         </div>
         <div class="work">
           <a href="https://github.com/mehdi-ayoub/portfolio-vue"> <img src="../assets/Vue.png" > </a>
-          <div class="layout">
+          <div class="layer">
             <h3> Personal Portfolio App </h3>
             <p> My portfolio, meticulously crafted using Vue.js, showcases my professional journey, achievements, and personal details. It serves as a reflection of my dedication to excellence and provides a comprehensive view of my skills and experiences in the tech industry.
             </p>
@@ -388,9 +388,40 @@ export default {
   height: 250px;
   border-radius: 10px;
   display: block;
+  transition: transform 0.5s;
 }
 
-.work h3 {
 
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
 }
 </style>
