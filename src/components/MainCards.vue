@@ -41,12 +41,12 @@
           </p>
 
           <div class="tab-titles">
-            <p class="tab-links active-link"> Skills </p>
-            <p class="tab-links"> Experience </p>
-            <p class="tab-links"> Education </p>
+            <p class="tab-links" :class="{ 'active-link': activeTab === 'skills' }" @click="activeTab = 'skills'"> Skills </p>
+            <p class="tab-links" :class="{ 'active-link': activeTab === 'experience' }" @click="activeTab = 'experience'"> Experience </p>
+            <p class="tab-links" :class="{ 'active-link': activeTab === 'education' }" @click="activeTab = 'education'"> Education </p>
           </div>
 
-          <div class="tab-contents active-tab">
+          <div class="tab-contents" v-show="activeTab === 'skills'">
             <ul>
               <li> <span> Programming Languages </span> <br> Python - C - Ruby </li>
               <li> <span> Back-end Frameworks </span> <br> Django - Rails - Laravel </li>
@@ -54,7 +54,7 @@
             </ul>
           </div>
 
-          <div class="tab-contents">
+          <div class="tab-contents" v-show="activeTab === 'experience'">
             <ul>
               <li> <span> 08/2023 - Present </span> <br> Web Developer Intern </li>
               <li> <span> 01/2023 - 06/2023 </span> <br> Customer Support Representative </li>
@@ -64,7 +64,7 @@
             </ul>
           </div>
 
-          <div class="tab-contents">
+          <div class="tab-contents" v-show="activeTab === 'education'">
             <ul>
               <li> <span> Le Wagon </span> <br> Web Development </li>
               <li> <span> American University of Beirut </span> <br> Diploma in AI and Data Science </li>
@@ -82,7 +82,11 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      activeTab: 'skills'
+    }
+  }
 }
 </script>
 
@@ -238,13 +242,5 @@ export default {
 .tab-contents ul li span {
   font-size: 14px;
   color: #b54769;
-}
-
-.tab-contents {
-  display: none;
-}
-
-.tab-contents.active-tab {
-  display: block;
 }
 </style>
