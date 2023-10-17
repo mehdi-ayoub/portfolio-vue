@@ -159,6 +159,25 @@
     </div>
   </div>
 
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title"> Contact Me </h1>
+          <p> <font-awesome-icon :icon="['far', 'paper-plane']" class="contact-icon"/> ayoub.mehdi@outlook.com </p>
+          <p> <font-awesome-icon :icon="['fas', 'mobile']" class="contact-icon" />00971527175267 </p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mehdi-ayoub-6b1485243/"> <font-awesome-icon :icon="['fab', 'linkedin']" /> </a>
+            <a href="https://github.com/mehdi-ayoub"><font-awesome-icon :icon="['fab', 'github']" /></a>
+          </div>
+          <a href="/MehdiAyoubResume.pdf" download class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right"></div>
+
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -424,4 +443,67 @@ export default {
 .work:hover .layer {
   height: 100%;
 }
+
+
+/* ------- Contact ---- */
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+
+}
+
+.contact-icon {
+  color:#ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #ff004f;
+
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+
 </style>
