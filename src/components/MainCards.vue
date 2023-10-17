@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="../assets/user.png">
+          <img src="../assets/myphoto.jpg">
         </div>
         <div class="about-col-2">
           <h1 class="sub-title"> About Me </h1>
@@ -46,7 +46,7 @@
             <p class="tab-links"> Education </p>
           </div>
 
-          <div class="tab-contents">
+          <div class="tab-contents active-tab">
             <ul>
               <li> <span> Programming Languages </span> <br> Python - C - Ruby </li>
               <li> <span> Back-end Frameworks </span> <br> Django - Rails - Laravel </li>
@@ -101,7 +101,7 @@ export default {
 
   #header {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     /* background-image: url(../assets/photo-new.png); */
     background-size: cover;
     background-position: center;
@@ -238,5 +238,13 @@ export default {
 .tab-contents ul li span {
   font-size: 14px;
   color: #b54769;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
 }
 </style>
