@@ -120,6 +120,44 @@
 
   <!----------- Portfolio ---------------->
 
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title"> My Work </h1>
+      <div class="work-list">
+        <div class="work">
+          <a href="https://github.com/mehdi-ayoub/EcoWheels"> <img src="../assets/EcoWheels.png" > </a>
+          <div class="layout">
+            <h3> CO2 Emission Calculator App </h3>
+            <p> Developed using Rails, this application automatically detects and
+              captures user location through geolocation services.
+              It then computes the CO2 emissions between two specified distances,
+              providing users with insights into their environmental footprint.
+            </p>
+
+          </div>
+        </div>
+        <div class="work">
+          <a href="https://github.com/mehdi-ayoub/React-Project-1">  <img src="../assets/React.png" > </a>
+          <div class="layout">
+            <h3> Delivery App </h3>
+            <p> Built with Rails on the back-end and React on the front-end,
+              this delivery application supports comprehensive CRUD actions.
+              Users can effortlessly tally the items in each delivery.
+              Additionally, a convenient icon enables users to seamlessly mark a delivery as "delivered."
+            </p>
+          </div>
+        </div>
+        <div class="work">
+          <a href="https://github.com/mehdi-ayoub/portfolio-vue"> <img src="../assets/Vue.png" > </a>
+          <div class="layout">
+            <h3> Personal Portfolio App </h3>
+            <p> My portfolio, meticulously crafted using Vue.js, showcases my professional journey, achievements, and personal details. It serves as a reflection of my dedication to excellence and provides a comprehensive view of my skills and experiences in the tech industry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </template>
 
@@ -326,4 +364,33 @@ export default {
   margin-bottom: 20px;
  }
 
+/* ---- portfolio ---- */
+
+#portfolio {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  display: block;
+}
+
+.work h3 {
+
+}
 </style>
